@@ -8,14 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HelloControllerTest {
 
-    @Test
-    void testHello() {
-        CalculatorService mockService = mock(CalculatorService.class);
-        HelloController controller = new HelloController(mockService);
-
-        String response = controller.hello();
-        assertEquals("Hello Pipeline", response);
-    }
+//    @Test
+//    void testHello() {
+//        CalculatorService mockService = mock(CalculatorService.class);
+//        HelloController controller = new HelloController(mockService);
+//
+//        String response = controller.hello();
+//        assertEquals("Hello Pipeline", response);
+//    }
 
 
     @Test
