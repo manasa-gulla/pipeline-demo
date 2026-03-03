@@ -22,9 +22,6 @@ jobs:
         run: chmod +x mvnw
 
       - name: Build, Test and Sonar Analysis
-        run: ./mvnw clean verify sonar:sonar \
-          -Dsonar.projectKey=manasa-gulla_pipeline-demo \
-          -Dsonar.organization=manasa-gulla \
-          -Dsonar.host.url=https://sonarcloud.io
+        run: ./mvnw clean verify sonar:sonar -Dsonar.projectKey=manasa-gulla_pipeline-demo -Dsonar.organization=manasa-gulla -Dsonar.host.url=https://sonarcloud.io
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
