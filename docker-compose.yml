@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+
+  app:
+    build: .
+    container_name: pipeline-demo-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: pipeline-demo-db
+    environment:
+      MYSQL_DATABASE: calculator_db
+      MYSQL_ROOT_PASSWORD: User@123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
